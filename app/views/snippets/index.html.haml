@@ -1,0 +1,5 @@
+- if @snippets.any?
+  .snippets
+  - @snippets.each do |snippet|
+    .snippet
+      = snippet.body
