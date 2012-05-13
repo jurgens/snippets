@@ -22,8 +22,14 @@ gem 'jquery-rails'
 
 group :test, :development do
   gem 'rspec-rails'
+
+end
+
+group :test do
   gem 'shoulda-matchers'
   gem 'turnip'
+  gem 'factory_girl_rails'
+  gem 'capybara'
 end
 
 group :development do
