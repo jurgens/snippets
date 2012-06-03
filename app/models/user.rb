@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :boards
+  has_many :boards, foreign_key: :owner_id
   has_many :snippets
 
   attr_accessible :username, :email, :password, :password_confirmation, :remember_me

@@ -2,7 +2,9 @@ Snippets::Application.routes.draw do
 
   root :to => 'snippets#index'
 
+  resources :boards
   resources :snippets
+  resource :account
 
   devise_for :users
 

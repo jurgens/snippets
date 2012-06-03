@@ -1,7 +1,7 @@
 class Snippet < ActiveRecord::Base
   belongs_to :user
 
-  validates :body, presence: true
-  
-  attr_accessible :body
+  validates :name, :body, presence: true
+
+  attr_accessible :name, :body, :board_id
 end

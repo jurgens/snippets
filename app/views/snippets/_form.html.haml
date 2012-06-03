@@ -1,4 +1,7 @@
 = simple_form_for @snippet do |form|
+
+  = form.input :name
   = form.input :body
-  
+  = form.input :board_id, collection: @boards
+
   = form.submit
