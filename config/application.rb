@@ -11,6 +11,16 @@ end
 
 module Snippets
   class Application < Rails::Application
+
+    config.generators do |g|
+      g.test_framework :rspec
+      g.integration_tool :rspec
+      g.helper false
+      g.view_specs false
+      g.fixture false
+      g.fixture_replacement :factory_girl
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

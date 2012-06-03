@@ -1,5 +1,11 @@
 - if @snippets.any?
   .snippets
-  - @snippets.each do |snippet|
-    .snippet
-      = snippet.body
+    - @snippets.each do |snippet|
+      %h3= link_to snippet.name, [snippet]
+      .row
+        .span12
+          = snippet.body
+          .author
+            == posted by #{snippet.author_name}
+            == on #{snippet.created_at}
+

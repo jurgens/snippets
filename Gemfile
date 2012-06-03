@@ -19,12 +19,14 @@ group :test do
   gem 'turnip'
   gem 'factory_girl_rails'
   gem 'capybara'
+  gem 'launchy'
 end
 
 group :development do
   gem 'guard'
   gem 'guard-rspec'
   gem 'libnotify'
+  gem 'thin'
 end
 
 group :assets do

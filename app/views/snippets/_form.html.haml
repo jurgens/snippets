@@ -1,7 +1,7 @@
 = simple_form_for @snippet do |form|
 
-  = form.input :name
-  = form.input :body
-  = form.input :board_id, collection: @boards
+  = form.input :name, input_html: {class: 'span8'}
+  = form.input :body, input_html: {class: 'span8', rows: '8'}
+  = form.input :board_id, collection: @boards, prompt: false
 
-  = form.submit
+  = form.submit 'Submit', class: 'btn btn-primary'
