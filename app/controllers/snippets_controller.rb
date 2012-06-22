@@ -3,6 +3,8 @@ class SnippetsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
   before_filter :load_boards, only: [:new,:create]
 
+  has_scope :search
+
   inherit_resources
 
   protected

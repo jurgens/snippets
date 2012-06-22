@@ -2,6 +2,6 @@
 
   = form.input :name, input_html: {class: 'span8'}
   = form.input :body, input_html: {class: 'span8', rows: '8'}
-  = form.input :board_id, collection: @boards, prompt: false
+  = form.input :board_id, collection: @boards, prompt: false, label: 'Board'
 
   = form.submit 'Submit', class: 'btn btn-primary'

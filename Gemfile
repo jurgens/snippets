@@ -7,8 +7,10 @@ gem 'haml'
 gem 'twitter-bootstrap-rails', '2.0.6'
 gem 'devise'
 gem 'inherited_resources'
+gem 'has_scope'
 gem 'quiet_assets'
 gem 'jquery-rails'
+
 
 group :test, :development do
   gem 'rspec-rails'
@@ -20,6 +22,9 @@ group :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'launchy'
+  gem 'faker'
+  gem 'database_cleaner'
+  gem 'poltergeist'
 end
 
 group :development do
