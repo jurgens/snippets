@@ -1,10 +1,10 @@
-@javascript
 Feature: search
   Background:
     Given I am a registered user
     Given I have snippet named "Brilliant"
     Given I have snippet named "Awful"
 
+  @javascript
   Scenario: searching for a snippet
     When I search for "Brilliant"
     Then I should see "Brilliant"

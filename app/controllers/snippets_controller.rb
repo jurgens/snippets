@@ -10,7 +10,9 @@ class SnippetsController < ApplicationController
   protected
 
   def begin_of_association_chain
-    current_user
+    if user_signed_in?
+      current_user
+    end
   end
 
   def load_boards
