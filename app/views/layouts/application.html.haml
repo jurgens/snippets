@@ -47,15 +47,17 @@
                 -# %li= link_to "Sign in with Google", user_omniauth_authorize_path(:google)
 
     .container
-      .row
-        .span12
-          - flash.each do |name, msg|
-            %div{ class: "alert alert-#{name == :notice ? "success" : "error"}" }
-              %a{ class: "close", data: { dismiss: "alert" } } ×
-              = msg
+      - unless flash.empty?
+        .row
+          .span12
+            - flash.each do |name, msg|
+              %div{ class: "alert alert-#{name == :notice ? "success" : "error"}" }
+                %a{ class: "close", data: { dismiss: "alert" } } ×
+                = msg
 
 
-      = yield
+      #content
+        = yield
 
       %footer.footer
         %p &copy; 2012

@@ -3,8 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.snippets {
-  .row {
-    margin-bottom: 1em;
+.snippet-list {
+  .snippet {
+    margin-bottom: 1.5em;
+    .authored {
+      font-size: 14px;
+      color: #999;
+    }
   }
 }

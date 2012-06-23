@@ -2,19 +2,22 @@
   = render 'layouts/search'
 
 .page-header
-  %h1 #{@board.name}
+  %h2= @board.name
 
 - if @snippets.empty?
   %p
-    =link_to 'Create a snippet', new_snippet_path
+    %span.icon.icon-plus
+    = link_to 'Create a snippet', new_snippet_path
 - else
-  .snippets
+  .snippet-list.row
     - @snippets.each do |snippet|
-      %h3= link_to snippet.name, [snippet]
-      .row
-        .span12
-          = snippet.body
-          .author
-            == posted by #{snippet.author_name}
-            == on #{snippet.created_at}
+      .snippet.span9
+        %h3
+          = link_to snippet.name, [snippet]
+          %span.authored
+            by
+            %span.author= snippet.author_name
+
+        = snippet.body
+        == on #{snippet.created_at}
 

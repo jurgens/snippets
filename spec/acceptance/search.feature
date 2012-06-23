@@ -7,7 +7,6 @@ Feature: search
 
   Scenario: searching for a snippet
     When I am on a my recent board page
-     And show me the page
      And I search for "Brilliant"
     Then I should see "Brilliant"
      And I should not see "Awful"

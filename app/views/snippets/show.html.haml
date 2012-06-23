@@ -1,7 +1,10 @@
 = flash[:notice]
 
 .page-header
-  %h1= resource.name
+  %h2
+    = link_to resource.board.name, board_path(resource.board)
+    &rarr;
+    = resource.name
 
 .row
   .span12

@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     if resource.is_a?(User) && resource.boards.any?
-      board_snippets_path(resource.boards.first)
+      board_path resource.boards.first
     else
       root_path
     end

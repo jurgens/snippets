@@ -8,7 +8,7 @@ Snippets::Application.routes.draw do
 
   devise_for :users
 
-  match '/:slug', to: "snippets#index", as: :board_snippets
+  match '/:slug', to: "snippets#index", as: :board
 
   # match ':controller(/:action(/:id))(.:format)'
 end

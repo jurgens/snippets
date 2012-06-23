@@ -1,17 +1,19 @@
 .page-header
-  %h1
+  %h2
     Boards
-
-%p
-  = link_to 'Create Board', [:new, :board]
+    .add-link
+      %span.icon.icon-plus
+      = link_to 'Add new board', [:new, :board]
 
 - unless collection.empty?
   %table.table
+    %col{width: ''}
+    %col{width: '10%'}
+    %col{width: '10%'}
     - collection.each do |resource|
       %tr
-        %td= link_to resource.name, board_snippets_path(resource)
-        %td 0 users
-        %td 0 snippets
+        %td= link_to resource.name, board_path(resource)
+        %td= pluralize(resource.snippets.count, 'snippet')
         %td= link_to 'edit', [:edit, resource]
 
 

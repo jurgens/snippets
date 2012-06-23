@@ -4,7 +4,6 @@ gem 'rails', '~>3.2.3'
 gem 'mysql2'
 gem 'simple_form'
 gem 'haml'
-gem 'twitter-bootstrap-rails', '2.0.6'
 gem 'devise'
 gem 'inherited_resources'
 gem 'has_scope'
@@ -39,4 +38,5 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'therubyracer', platform: :ruby
   gem 'uglifier', '>= 1.0.3'
+  gem 'twitter-bootstrap-rails', '2.0.6'
 end
