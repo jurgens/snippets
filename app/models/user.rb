@@ -11,4 +11,11 @@ class User < ActiveRecord::Base
 
   validates :username, :email, presence: true
 
+  after_create :create_default_board
+
+  protected
+
+  def create_default_board
+     self.boards.create name: username
+  end
 end

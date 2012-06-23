@@ -10,7 +10,7 @@ gem 'inherited_resources'
 gem 'has_scope'
 gem 'quiet_assets'
 gem 'jquery-rails'
-
+gem 'friendly_id'
 
 group :test, :development do
   gem 'rspec-rails'

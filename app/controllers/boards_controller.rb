@@ -1,5 +1,8 @@
 class BoardsController < ApplicationController
+
   inherit_resources
+
+  before_filter :authenticate_user!
 
   def create
     create! { collection_path }

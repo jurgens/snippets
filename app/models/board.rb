@@ -1,7 +1,11 @@
 class Board < ActiveRecord::Base
-  belongs_to :owner, class_name: 'User'
+  extend FriendlyId
+  friendly_id :name, use: :slugged
 
-  validates :name, presence: true
+  belongs_to :owner, class_name: 'User'
+  has_many :snippets
+
+  validates :name, presence: true, uniqueness: true
 
   attr_accessible :name
 end
